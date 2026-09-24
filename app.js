@@ -1,5 +1,5 @@
 /**
- * NexusFlow - Interactive Logic & Engine
+ * NEXO - Interactive Logic & Engine
  * Hero Canvas Simulator, Dynamic SVG Connectors, Integrations Filter,
  * Template Switcher, Terminal Tabs, Pricing Toggle, FAQ Accordion
  */
@@ -643,15 +643,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminalCopyText = document.getElementById('terminalCopyText');
 
   const terminalSnippets = {
-    'docker': `# 1. Inicia NexusFlow con almacenamiento persistente
+    'docker': `# 1. Inicia NEXO con almacenamiento persistente
 docker run -d \\
-  --name nexusflow \\
+  --name nexo \\
   -p 5678:5678 \\
   -e ENCRYPTION_KEY="generar_clave_segura_aqui" \\
   -e WEBHOOK_URL="https://nexus.tu-dominio.com/" \\
-  -v ~/.nexusflow_data:/data \\
+  -v ~/.nexo_data:/data \\
   --restart unless-stopped \\
-  nexusflow/nexusflow:latest
+  nexo/nexo:latest
 
 # 2. Accede a tu interfaz gráfica en: http://localhost:5678`,
 
@@ -662,8 +662,8 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: nexusflow
-      POSTGRES_USER: nexus
+      POSTGRES_DB: nexo
+      POSTGRES_USER: nexo
       POSTGRES_PASSWORD: secretpassword
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -672,8 +672,8 @@ services:
     image: redis:7-alpine
     command: redis-server --appendonly yes
 
-  nexusflow:
-    image: nexusflow/nexusflow:latest
+  nexo:
+    image: nexo/nexo:latest
     restart: always
     ports:
       - "5678:5678"
@@ -690,28 +690,28 @@ volumes:
   postgres_data:`,
 
     'helm': `# Despliegue en Kubernetes mediante Helm Chart
-# 1. Añade el repositorio oficial de NexusFlow
-helm repo add nexusflow https://charts.nexusflow.io
+# 1. Añade el repositorio oficial de NEXO
+helm repo add nexo https://charts.nexo.io
 helm repo update
 
 # 2. Instala el clúster con alta disponibilidad
-helm install nexusflow-cluster nexusflow/nexusflow \\
+helm install nexo-cluster nexo/nexo \\
   --set replicaCount=3 \\
   --set postgresql.enabled=true \\
   --set redis.enabled=true \\
   --set ingress.enabled=true \\
   --set ingress.hosts[0].host="nexus.empresa.com"`,
 
-    'cli': `# Instalación mediante CLI de NexusFlow
-npm install -g @nexusflow/cli
+    'cli': `# Instalación mediante CLI de NEXO
+npm install -g @nexo/cli
 
 # Inicia un entorno local en modo desarrollo
-nexusflow init mi-proyecto-automatizacion
+nexo init mi-proyecto-automatizacion
 cd mi-proyecto-automatizacion
-nexusflow start --tunnel
+nexo start --tunnel
 
 # Importa tus flujos existentes de n8n
-nexusflow import --source n8n ./workflows_antiguos.json`
+nexo import --source n8n ./workflows_antiguos.json`
   };
 
   terminalTabs.forEach(tab => {
