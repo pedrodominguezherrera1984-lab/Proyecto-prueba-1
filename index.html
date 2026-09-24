@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexusFlow | Automatización de Flujos de Trabajo e IA de Código Abierto</title>
-  <meta name="description" content="La plataforma de automatización de flujos de trabajo de código abierto con IA nativa. Conecta APIs, bases de datos y agentes autónomos en un canvas visual ultra rápido. Alternativa moderna a n8n y Zapier.">
-  <meta name="keywords" content="automatizacion, n8n, workflows, open source, agentes IA, APIs, webhooks, docker, self-hosted">
+  <title>NEXO | Automatización de Flujos de Trabajo e IA de Código Abierto</title>
+  <meta name="description" content="NEXO: La plataforma de automatización de flujos de trabajo de código abierto con IA nativa. Conecta APIs, bases de datos y agentes autónomos en un canvas visual ultra rápido. Alternativa moderna a n8n y Zapier.">
+  <meta name="keywords" content="automatizacion, n8n, workflows, open source, agentes IA, APIs, webhooks, docker, self-hosted, nexo">
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NexusFlow | Automatización Visual e IA de Código Abierto">
-  <meta property="og:description" content="Crea flujos de trabajo inteligentes sin límites de ejecución. Autoalojable, extensible y diseñado para desarrolladores.">
+  <meta property="og:title" content="NEXO | Automatización Visual e IA de Código Abierto">
+  <meta property="og:description" content="Crea flujos de trabajo inteligentes sin límites de ejecución con NEXO. Autoalojable, extensible y diseñado para desarrolladores.">
   
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     <div class="container announcement-inner">
       <span class="badge-sparkle">Novedad</span>
       <span class="announcement-text">
-        <strong>NexusFlow v2.4 liberado:</strong> Soporte nativo para el protocolo MCP de Anthropic y Agentes Multi-Modelo.
+        <strong>NEXO v2.4 liberado:</strong> Soporte nativo para el protocolo MCP de Anthropic y Agentes Multi-Modelo.
       </span>
       <a href="#features" class="announcement-link">Ver detalles &rarr;</a>
     </div>
@@ -40,7 +40,7 @@
   <!-- Main Navigation Header -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="brand-logo" aria-label="NexusFlow Inicio">
+      <a href="#" class="brand-logo" aria-label="NEXO Inicio">
         <div class="logo-icon-wrap">
           <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="32" height="32" rx="8" fill="url(#brand-grad)" />
@@ -50,14 +50,14 @@
             <path d="M10.5 11L14.5 20M21.5 11L17.5 20M12 9H20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
             <defs>
               <linearGradient id="brand-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6366F1" />
-                <stop offset="0.5" stop-color="#06B6D4" />
-                <stop offset="1" stop-color="#10B981" />
+                <stop stop-color="#8DB843" />
+                <stop offset="0.5" stop-color="#B8E45D" />
+                <stop offset="1" stop-color="#556B2F" />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <span class="brand-name">Nexus<span class="gradient-text">Flow</span></span>
+        <span class="brand-name">NEX<span class="gradient-text">O</span></span>
         <span class="brand-version">v2.4</span>
       </a>
 
@@ -131,7 +131,7 @@
         <!-- Quick Deploy Command Line Pill -->
         <div class="quick-docker-box" id="quickDockerBox">
           <span class="prompt-sym">$</span>
-          <code class="code-text" id="dockerQuickText">docker run -it --rm -p 5678:5678 -v ~/.nexusflow:/data nexusflow/nexusflow:latest</code>
+          <code class="code-text" id="dockerQuickText">docker run -it --rm -p 5678:5678 -v ~/.nexo:/data nexo/nexo:latest</code>
           <button class="copy-pill-btn" id="copyDockerBtn" title="Copiar comando al portapapeles">
             <svg class="copy-icon" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
@@ -185,9 +185,9 @@
               <svg class="connector-svg" id="connectorSvg">
                 <defs>
                   <linearGradient id="cableGradActive" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#06B6D4" />
-                    <stop offset="50%" stop-color="#8B5CF6" />
-                    <stop offset="100%" stop-color="#10B981" />
+                    <stop offset="0%" stop-color="#8DB843" />
+                    <stop offset="50%" stop-color="#B8E45D" />
+                    <stop offset="100%" stop-color="#608127" />
                   </linearGradient>
                   <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
                     <feGaussianBlur stdDeviation="3" result="blur" />
@@ -454,7 +454,7 @@
       <div class="container">
         
         <div class="section-badge-center">
-          <span class="sub-badge">¿Por qué NexusFlow?</span>
+          <span class="sub-badge">¿Por qué NEXO?</span>
         </div>
         <h2 class="section-title text-center">
           Construido para desarrolladores que no aceptan<br>
@@ -541,7 +541,7 @@
               </div>
               <h3 class="bento-title">Sin Cobros Abusivos por Operación</h3>
               <p class="bento-desc">
-                ¿Cansado de pagar miles de dólares en Zapier cuando tu volumen crece? Con NexusFlow ejecutas millones de flujos sin costo extra por tarea. Paga por infraestructura, no por tu éxito.
+                ¿Cansado de pagar miles de dólares en Zapier cuando tu volumen crece? Con NEXO ejecutas millones de flujos sin costo extra por tarea. Paga por infraestructura, no por tu éxito.
               </p>
               <div class="metric-comparison">
                 <div class="comp-col">
@@ -549,7 +549,7 @@
                   <span class="comp-price text-red">~$3,200/mes</span>
                 </div>
                 <div class="comp-col highlight">
-                  <span class="comp-tool">NexusFlow Self-Host</span>
+                  <span class="comp-tool">NEXO Self-Host</span>
                   <span class="comp-price text-emerald">$0/mes</span>
                 </div>
               </div>
@@ -731,7 +731,7 @@
           <span class="sub-badge">Despliegue Rápido</span>
         </div>
         <h2 class="section-title text-center">
-          Despliega NexusFlow en tu infraestructura en segundos
+          Despliega NEXO en tu infraestructura en segundos
         </h2>
         <p class="section-subtitle text-center">
           Una sola imagen Docker optimizada sin dependencias engorrosas. Listo para producción con PostgreSQL y colas Redis.
@@ -749,7 +749,7 @@
               <button class="t-tab active" data-type="docker">Docker Run</button>
               <button class="t-tab" data-type="compose">Docker Compose</button>
               <button class="t-tab" data-type="helm">Kubernetes (Helm)</button>
-              <button class="t-tab" data-type="cli">Nexus CLI</button>
+              <button class="t-tab" data-type="cli">NEXO CLI</button>
             </div>
 
             <button class="terminal-copy-btn" id="terminalCopyBtn">
@@ -759,15 +759,15 @@
           </div>
 
           <div class="terminal-body">
-            <pre class="terminal-code"><code id="terminalSnippetCode"># 1. Inicia NexusFlow con almacenamiento persistente
+            <pre class="terminal-code"><code id="terminalSnippetCode"># 1. Inicia NEXO con almacenamiento persistente
 docker run -d \
-  --name nexusflow \
+  --name nexo \
   -p 5678:5678 \
   -e ENCRYPTION_KEY="generar_clave_segura_aqui" \
-  -e WEBHOOK_URL="https://nexus.tu-dominio.com/" \
-  -v ~/.nexusflow_data:/data \
+  -e WEBHOOK_URL="https://nexo.tu-dominio.com/" \
+  -v ~/.nexo_data:/data \
   --restart unless-stopped \
-  nexusflow/nexusflow:latest
+  nexo/nexo:latest
 
 # 2. Accede a tu interfaz gráfica en: http://localhost:5678</code></pre>
           </div>
@@ -919,7 +919,7 @@ docker run -d \
           <span class="sub-badge">Opiniones de la Comunidad</span>
         </div>
         <h2 class="section-title text-center">
-          Lo que dicen los equipos que migraron a NexusFlow
+          Lo que dicen los equipos que migraron a NEXO
         </h2>
 
         <div class="testimonials-grid">
@@ -927,7 +927,7 @@ docker run -d \
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "Teníamos una factura de más de $4,800 al mes en Zapier debido a miles de webhooks de comercio electrónico. Migramos todo a una sola instancia de NexusFlow en AWS ECS y ahora pagamos $45 al mes de cómputo. El ROI fue inmediato."
+              "Teníamos una factura de más de $4,800 al mes en Zapier debido a miles de webhooks de comercio electrónico. Migramos todo a una sola instancia de NEXO en AWS ECS y ahora pagamos $45 al mes de cómputo. El ROI fue inmediato."
             </p>
             <div class="author-info">
               <div class="author-avatar av-1">MC</div>
@@ -941,7 +941,7 @@ docker run -d \
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "La capacidad de combinar nodos visuales con funciones en TypeScript y el nuevo protocolo MCP para nuestros agentes de IA ha transformado cómo prototipamos productos. n8n era bueno, pero NexusFlow lleva la experiencia de desarrollo a otro nivel."
+              "La capacidad de combinar nodos visuales con funciones en TypeScript y el nuevo protocolo MCP para nuestros agentes de IA ha transformado cómo prototipamos productos. n8n era bueno, pero NEXO lleva la experiencia de desarrollo a otro nivel."
             </p>
             <div class="author-info">
               <div class="author-avatar av-2">SR</div>
@@ -955,7 +955,7 @@ docker run -d \
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "Para nosotros en salud, cumplir con HIPAA era no negociable. Las soluciones en la nube de terceros nos bloqueaban. Con NexusFlow autoalojado tenemos auditoría estricta, cifrado y control de acceso por roles sin fricciones."
+              "Para nosotros en salud, cumplir con HIPAA era no negociable. Las soluciones en la nube de terceros nos bloqueaban. Con NEXO autoalojado tenemos auditoría estricta, cifrado y control de acceso por roles sin fricciones."
             </p>
             <div class="author-info">
               <div class="author-avatar av-3">DA</div>
@@ -986,12 +986,12 @@ docker run -d \
           
           <div class="accordion-item">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>¿En qué se diferencia NexusFlow de Zapier y Make?</span>
+              <span>¿En qué se diferencia NEXO de Zapier y Make?</span>
               <svg class="chevron-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
             </button>
             <div class="accordion-content">
               <p>
-                A diferencia de Zapier o Make, NexusFlow es de código abierto y autoalojable en tu propia infraestructura. No cobramos tarifas abusivas por número de tareas ejecutadas. Además, está pensado específicamente para desarrolladores: permite escribir código JavaScript/Python dentro de cualquier nodo, versionar flujos con Git y crear agentes autónomos de IA usando protocolos modernos como MCP.
+                A diferencia de Zapier o Make, NEXO es de código abierto y autoalojable en tu propia infraestructura. No cobramos tarifas abusivas por número de tareas ejecutadas. Además, está pensado específicamente para desarrolladores: permite escribir código JavaScript/Python dentro de cualquier nodo, versionar flujos con Git y crear agentes autónomos de IA usando protocolos modernos como MCP.
               </p>
             </div>
           </div>
@@ -1003,7 +1003,7 @@ docker run -d \
             </button>
             <div class="accordion-content">
               <p>
-                Sí. La edición Community es completamente gratuita para uso personal y comercial bajo nuestra licencia de código abierto. Puedes ejecutar tantos flujos, disparadores y datos como soporte tu hardware sin pagar ninguna licencia de software a NexusFlow.
+                Sí. La edición Community es completamente gratuita para uso personal y comercial bajo nuestra licencia de código abierto. Puedes ejecutar tantos flujos, disparadores y datos como soporte tu hardware sin pagar ninguna licencia de software a NEXO.
               </p>
             </div>
           </div>
@@ -1027,7 +1027,7 @@ docker run -d \
             </button>
             <div class="accordion-content">
               <p>
-                Ofrecemos una herramienta CLI de importación (<code>nexusflow import --source n8n workflow.json</code>) que convierte automáticamente los nodos estándar y mapeos de variables de n8n a la sintaxis nativa de NexusFlow con un 95% de compatibilidad automática.
+                Ofrecemos una herramienta CLI de importación (<code>nexo import --source n8n workflow.json</code>) que convierte automáticamente los nodos estándar y mapeos de variables de n8n a la sintaxis nativa de NEXO con un 95% de compatibilidad automática.
               </p>
             </div>
           </div>
@@ -1060,7 +1060,7 @@ docker run -d \
               Únete a miles de ingenieros que construyen el futuro de los flujos de trabajo autónomos. Despliega en 60 segundos.
             </p>
             <div class="cta-actions">
-              <a href="#pricing" class="btn btn-primary btn-lg">Probar NexusFlow Cloud</a>
+              <a href="#pricing" class="btn btn-primary btn-lg">Probar NEXO Cloud</a>
               <a href="#self-host" class="btn btn-secondary btn-lg">Ver Guía de Autoalojamiento</a>
             </div>
           </div>
@@ -1086,7 +1086,7 @@ docker run -d \
                 <path d="M10.5 11L14.5 20M21.5 11L17.5 20M12 9H20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
               </svg>
             </div>
-            <span class="brand-name">Nexus<span class="gradient-text">Flow</span></span>
+            <span class="brand-name">NEX<span class="gradient-text">O</span></span>
           </a>
           <p class="footer-bio">
             Plataforma de automatización de código abierto diseñada para ingenieros, desarrolladores de IA y equipos ágiles.
@@ -1145,7 +1145,7 @@ docker run -d \
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 NexusFlow Inc. Publicado bajo Licencia Open Source & Fair-Code. Todos los derechos reservados.</p>
+        <p>&copy; 2026 NEXO Inc. Publicado bajo Licencia Open Source & Fair-Code. Todos los derechos reservados.</p>
         <div class="footer-legal-links">
           <a href="#">Privacidad</a>
           <a href="#">Términos de Servicio</a>
