@@ -377,7 +377,7 @@ const mPut=x=>tx("readwrite",s=>s.put(x)),mDel=id=>tx("readwrite",s=>s.delete(id
 let dl=null;(async()=>{try{dl=await window.claude?.use?.("downloads")}catch(e){}})();
 async function offer(filename,data){
   if(dl){try{await dl.save({filename,data});toast("Archivo descargado")}catch(e){if(e.code!=="declined")toast("No se pudo descargar: "+(e.message||e.code))}return}
-  const a=document.createElement("a");a.href=URL.createObjectURL(data instanceof Blob?data:new Blob([data]));a.download=filename;a.click();
+  const a=document.createElement("a");a.href=URL.createObjectURL(data instanceof Blob?data:new Blob([data]));a.download=filename;document.body.append(a);a.click();setTimeout(()=>a.remove(),1000);
 }
 
 // ---------- Talla interactiva ----------
@@ -518,7 +518,7 @@ $("toRes").addEventListener("click",()=>{const el=$("results");if(!el.hidden){el
 
 // ---------- EXPORTACIONES ----------
 const stTxt=s=>s==="ok"?"Cumple":s==="no"?"No cumple":"Pendiente";
-const safe=s=>String(s).replace(/[^\w\-áéíóúñÁÉÍÓÚÑ ]+/g,"").trim().replace(/\s+/g,"_")||"fabrica";
+const safe=s=>String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w\- ]+/g,"").trim().replace(/\s+/g,"_")||"fabrica";
 const mPath=(x,sups)=>`fotos/${safe(sups.find(s=>s.id===x.sup)?.name||"sin_fabrica")}/${x.q?"P"+x.q:"fabrica"}_${x.id}_${safe(x.name.replace(/\.[^.]+$/,""))}${(x.name.match(/\.[^.]+$/)||[""])[0]}`;
 function rowsFor(s,all){return QS.map(q=>{const a=s.ans?.[q.n]||{};return{"Fábrica":s.name,"Sección":q.sec,"N°":q.n,"Pregunta":q.es,"Crítico":q.crit?"Sí":"","Estado":stTxt(a.s),"Respuesta":q.range?(a.v?fmt(a.v)+" piezas/mes":""):(a.o||[]).join(", "),"Observaciones":a.obs||"","Archivos":all.filter(x=>x.sup===s.id&&x.q===q.n).length}})}
 function summary(s){const st=stats(s),cap=s.ans?.[2]?.v;const o={"Fábrica":s.name,"Ciudad/stand":s.stand,"Contacto":s.contact,"WhatsApp":s.wa,"Correo":s.mail,"Notas":s.notes,"Respondidas":st.done,"% Cumple":st.pct,"Críticas no cumple":st.critNo,"Capacidad piezas/mes":cap||""};
